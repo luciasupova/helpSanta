@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const bag_1 = require("./bag");
+const santa_1 = require("./santa");
+const sled_1 = require("./sled");
+const types_1 = require("./types");
+const present_1 = require("./present");
+const santa1 = new santa_1.Santa("Klaus", 45);
+const sled1 = new sled_1.Sled(santa1);
+const bag1 = new bag_1.Bag(10, types_1.BagType.Canvas);
+const present1 = new present_1.Present("machine", 8, types_1.PresentType.Hard);
+const present2 = new present_1.Present("cat", 3, types_1.PresentType.Soft);
+bag1.addPresent(present1);
+bag1.addPresent(present2);
+sled1.addBag(bag1);
